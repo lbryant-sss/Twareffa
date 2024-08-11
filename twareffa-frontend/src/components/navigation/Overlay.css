@@ -1,0 +1,27 @@
+
+.overlay{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: 1000;
+    background-color: var(--secondary-background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    
+}
+.overlay-logo{
+    font-family: var(--logo-font);
+    color: #fff;
+    font-size: 2.2em;
+}
+
+.overlay.show{
+    display: flex;
+    opacity: 1;
+}
+.overlay.hide{
+    opacity: 0;
+    display: none;
+}
