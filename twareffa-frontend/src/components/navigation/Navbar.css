@@ -60,7 +60,7 @@ nav{
 }
 
 /* DESKTOP VIEW */
-@media (min-width: 900px) {
+@media (min-width: 1040px) {
   .menu-icon {
     display: none;
   }
