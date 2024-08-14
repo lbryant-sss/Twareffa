@@ -4,6 +4,8 @@
     --primary-background-color: #F9FAFC;
     --secondary-background-color: #2593D5;
     --additional-background-color: #FFFFFF;
+    --dark-button-background: #1570a8;
+    --button-hover-background-color: #0e5480;
     
     --primary-header-fontfamily: "Roboto";
     --text-fontfamily: "Roboto Slab";
@@ -14,7 +16,7 @@
     --blue-font-color: #2593D5;
 
 
-    --logo-font: "Edu VIC WA NT Beginner","Foldit";
+    --logo-font: "Edu VIC WA NT Beginner";
     --text-font: "Roboto Slab";
 }
 

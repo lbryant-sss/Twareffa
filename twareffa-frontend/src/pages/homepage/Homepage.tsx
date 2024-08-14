@@ -3,13 +3,21 @@ import Navbar from "../../components/navigation/Navbar";
 import Overlay from "../../components/navigation/Overlay";
 
 
-function Homepage(){
-    return(
+function Homepage() {
+    return (
         <>
             <section>
                 <Overlay />
-                <Navbar />
-                <h1>TWAREFFA</h1>
+                <div className="home-content-wrapper">
+                    <div className="nav-wrapper">
+                        <Navbar />
+                    </div> 
+                    <div className="middle-wrapper">
+                        <ul>
+                            <li>JKIA</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </>
     )
