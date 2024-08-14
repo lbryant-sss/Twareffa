@@ -1,0 +1,62 @@
+@import url("../../assets/styles/variables.css");
+
+@media screen and (max-width: 899px) {
+    .joblist-section{
+        min-height: 100vh;
+        margin-top: 0vh;
+        padding: 5vh 1vw 0 1vw;
+    }
+    .joblist-card{
+        min-height: fit-content;
+        padding: 1vh 1vw 5px 1vw;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .job-metadata, .job-pay{
+        display: flex;
+        height: 5vh;
+        background-color: var(--secondary-background-color);
+        color: var(--black-font-color);
+        font-family: var(--text-font);
+        padding: 6px;
+        align-items: center;
+    }
+    .job-pay{
+        background-color: transparent;
+    }
+    .job-metadata span{
+        margin: 0.3vw;
+    }
+    .user-dp{
+        flex: 0.2;
+        background-color: red;
+        border-radius: 50%;
+        max-height: 50px;
+        max-width: 50px;
+    }
+    .user-name, .created_at{
+        flex: 0.9;
+    }
+    .job-content{
+        padding: 0.8%;
+        max-width: 500px;
+        display: flex;
+        justify-content: center;
+        font-family: var(--text-font);
+        font-size: 1em;
+        color: var(--black-font-color);
+    }
+    .job-pay span{
+        flex: 1;
+        font-size: 1em;
+    }
+    .share-icon{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .joblist-section{
+        background-color: green;
+    }
+}

@@ -1,6 +1,7 @@
 import "./Homepage.css";
 import Navbar from "../../components/navigation/Navbar";
 import Overlay from "../../components/navigation/Overlay";
+import Joblist from "../../components/jobs/Joblist";
 
 
 function Homepage() {
@@ -13,9 +14,9 @@ function Homepage() {
                         <Navbar />
                     </div> 
                     <div className="middle-wrapper">
-                        <ul>
-                            <li>JKIA</li>
-                        </ul>
+                        <div className="joblist">
+                            <Joblist />
+                        </div>
                     </div>
                 </div>
             </section>

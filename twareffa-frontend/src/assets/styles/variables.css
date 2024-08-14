@@ -6,6 +6,7 @@
     --additional-background-color: #FFFFFF;
     --dark-button-background: #1570a8;
     --button-hover-background-color: #0e5480;
+    --border-color: #3F4243;
     
     --primary-header-fontfamily: "Roboto";
     --text-fontfamily: "Roboto Slab";
@@ -14,6 +15,7 @@
     --light-font-color: #BEC7CE;
     --white-font-color: #FFFFFF;
     --blue-font-color: #2593D5;
+    --black-font-color: #222;
 
 
     --logo-font: "Edu VIC WA NT Beginner";
