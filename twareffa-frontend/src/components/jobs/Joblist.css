@@ -57,6 +57,53 @@
 
 @media screen and (min-width: 900px) {
     .joblist-section{
-        background-color: green;
+        min-height: fit-content;
+    }
+    .joblist-wrapper{
+        padding: 1% 1%;
+        margin: 0.7%;
+    }
+    .joblist-card{
+        min-height: fit-content;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .job-metadata{
+        display: flex;
+    }
+    .job-metadata span{
+        flex: 1;
+        color: var(--white-font-color);
+        font-family: var(--text-font);
+        background-color: var(--secondary-background-color);
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        padding: 0.2em;
+    }
+    .job-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0.5em 0 0.5em 0;
+    }
+    .job-content span{
+        max-width: 600px;
+        font-family: var(--text-font);
+        font-size: 1em;
+        color: var(--black-font-color);
+    }
+    .job-pay{
+        display: flex;
+        align-items: center;
+    }
+    .job-pay span{
+        flex: 1;
+        font-family: var(--text-font);
+        font-size: 1em;
+        color: var(--black-font-color);
+    }
+    .share-icon{
+        display: flex;
+        justify-content: flex-end;
     }
 }

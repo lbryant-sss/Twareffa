@@ -2,7 +2,7 @@ import "./Homepage.css";
 import Navbar from "../../components/navigation/Navbar";
 import Overlay from "../../components/navigation/Overlay";
 import Joblist from "../../components/jobs/Joblist";
-
+import RightSideBar from "../../components/rightsidebar/RightsideBar";
 
 function Homepage() {
     return (
@@ -17,6 +17,9 @@ function Homepage() {
                         <div className="joblist">
                             <Joblist />
                         </div>
+                    </div>
+                    <div className="other-content-right">
+                        <RightSideBar />
                     </div>
                 </div>
             </section>

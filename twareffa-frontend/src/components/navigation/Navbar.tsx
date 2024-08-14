@@ -1,10 +1,7 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import Menubar from "../../assets/icons/menubar.svg";
-import CloseMenuIcon from "../../assets/icons/close-menu.svg";
-
 import HomeIcon from "../../assets/icons/nav-icons/home.svg";
-import DashboardIcon from "../../assets/icons/nav-icons/dashboard.svg";
 import MessagesIcon from "../../assets/icons/nav-icons/messages.svg";
 import NotificationsIcon from "../../assets/icons/nav-icons/notifications.svg";
 import ProfileIcon from "../../assets/icons/nav-icons/profile.svg";
@@ -28,9 +25,9 @@ function Navbar(){
             <div className="navbar-wrapper">
                 <header>
                     <div className="logo">
-                        <span>
-                            <Link to="/Twareffa">twareffa</Link>
-                        </span>
+                        <Link to="/Twareffa">
+                            <span >twareffa</span>
+                        </Link>
                     </div>
                     <div className="menu-icon">
                         <img src={showNav ? Menubar : Menubar} alt="Menubar" onClick={toggleNav} />
@@ -55,10 +52,11 @@ function Navbar(){
                                                 </div>
                                             </Link>
                                         </li>
-                                        <li>
+                                        <li className="messages">
                                             <Link to="/Twareffa">
                                                 <span>Messages</span>
                                                 <div className="icon">
+                                                    <p className="message-couter">0</p>
                                                     <img src={MessagesIcon} />
                                                 </div>
                                             </Link>
@@ -84,6 +82,15 @@ function Navbar(){
                                             <span>Search</span>
                                                 <div className="icon">
                                                     <img src={SearchIcon} />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                        <li className="notification-icon">
+                                            <Link to="/Twareffa">
+                                            <span>Notifications</span>
+                                                <div className="icon">
+                                                    <p className="note-counter">0</p>
+                                                    <img src={NotificationsIcon} />
                                                 </div>
                                             </Link>
                                         </li>
