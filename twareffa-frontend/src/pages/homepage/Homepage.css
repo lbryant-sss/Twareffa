@@ -1,11 +1,28 @@
 @import url("../../assets/styles/variables.css");
 
-.home-content-wrapper{
-    display: flex;
+@media screen and (max-width: 899px){
+    .home-content-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+        min-width: 100%;
+        min-height: 100vh;
+    }
+    .nav-wrapper{
+        flex: 0.2;
+    }
+    .middle-wrapper{
+        flex: 0.8;
+    }
 }
-.nav-wrapper{
-    flex: 0.3;
-}
-.middle-wrapper{
-    flex: 1.7;
+
+@media screen and (min-width: 900px) {
+    .home-content-wrapper{
+        display: flex;
+    }
+    .nav-wrapper{
+        flex: 0.3;
+    }
+    .middle-wrapper{
+        flex: 1.7;
+    }
 }

@@ -1,16 +1,5 @@
 @import url("../../assets/styles/variables.css");
 
-/*Desktop UI*/
-header{
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-.logo{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 .logo span a{
   font-family: var(--logo-font);
@@ -19,7 +8,80 @@ header{
   color: var(--white-font-color);
 }
 
+/*Mobile UI*/
+@media screen and (max-width: 899px) {
+    .menu-icon{
+      display: flex;
+      position: fixed;
+      top: 0%;
+      z-index: 10;
+    }
+    .menu-icon img{
+      width: 9vw;
+      max-width: 40px;
+      height: auto;
+    }
+    .menu-list ul li span{
+      display: none;
+    }
+    .menu-list ul{
+      display: flex;
+      background-color: var(--secondary-background-color);
+      position: fixed;
+      bottom: 0%;
+      width: 100%;
+      max-height: 40px;
+      padding: 0.1em;
+    }
+    .menu-items.hide{
+      background-color: var(--secondary-background-color);
+    }
+    .menu-items.show{
+      background-color: var(--button-hover-background-color);
+    }
+    .menu-list ul li{
+      padding: 0.2em;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0.1em;
+      box-shadow: -10px -10px 18px 0px rgba(0,0,0,0.1);
+    }
+    .auth-links-div{
+      position: absolute;
+      top: 40px;
+      display: flex;
+      background-color: var(--secondary-background-color);
+      padding-right: 1em;
+    }
+    .auth-links-div.hide{
+      display: none;
+    }
+    .auth-links-div.show{
+      display: none;
+      /* Change this to flex to show the menu*/
+    }
+    .auth-links-div ul li a{
+      font-family: var(--text-font);
+      font-size: 1em;
+      color: var(--white-font-color);
+    }
+}
+
+
+/*Desktop UI*/
 @media screen and (min-width: 900px) {
+  header{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .navbar-wrapper{
     background-color: var(--secondary-background-color);
     height: 100vh;

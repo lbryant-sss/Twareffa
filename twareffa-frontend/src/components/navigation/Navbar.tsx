@@ -33,12 +33,12 @@ function Navbar(){
                         </span>
                     </div>
                     <div className="menu-icon">
-                        <img src={showNav ? CloseMenuIcon : Menubar} alt="Menubar" onClick={toggleNav} />
+                        <img src={showNav ? Menubar : Menubar} alt="Menubar" onClick={toggleNav} />
                     </div>
                     <nav className={`slider ${showNav ? "show" : "hide"} `}>
                         <div className="menu">
                                 <div className="menu-list">
-                                    <ul className="menu-items">
+                                    <ul className={`menu-items ${showNav ? "show" :"hide"}`}>
                                         <li>
                                             <Link to="/Twareffa">
                                                 <span>Home</span>
@@ -89,7 +89,7 @@ function Navbar(){
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="auth-links-div">
+                                <div className={`auth-links-div ${showNav ? "show" : "hide"} `}>
                                     <ul className="menu-items">
                                         <li>
                                             <Link to="/Twareffa/login">Login</Link>
