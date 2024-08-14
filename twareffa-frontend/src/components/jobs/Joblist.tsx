@@ -29,7 +29,7 @@ function Joblist(){
                                 </span>
                                 <span>
                                     Pay: Ksh. 500
-                                </span>
+                                </span> 
                                 <span className="share-icon">
                                     <img src={ShareIcon} alt="" />
                                 </span>

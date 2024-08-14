@@ -1,0 +1,9 @@
+
+
+@media screen and (min-width: 900px) {
+    .auth-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

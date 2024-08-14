@@ -21,6 +21,8 @@
     }
     .nav-wrapper{
         flex: 0.4;
+        position: sticky;
+        top: 0;
     }
     .middle-wrapper{
         flex: 1.2;

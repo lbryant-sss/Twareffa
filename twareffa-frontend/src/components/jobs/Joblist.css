@@ -55,6 +55,8 @@
     }
 }
 
+
+/* DESKTOP UI */
 @media screen and (min-width: 900px) {
     .joblist-section{
         min-height: fit-content;
@@ -92,6 +94,17 @@
         font-size: 1em;
         color: var(--black-font-color);
     }
+    .user-dp{
+        flex: 0.2;
+    }
+    .created-at{
+        flex: 1.2;
+        
+    }
+    .user-name{
+        flex: 0.6;
+    }
+
     .job-pay{
         display: flex;
         align-items: center;
@@ -106,4 +119,5 @@
         display: flex;
         justify-content: flex-end;
     }
+    
 }
