@@ -6,7 +6,9 @@
     --additional-background-color: #FFFFFF;
     --dark-button-background: #1570a8;
     --button-hover-background-color: #0e5480;
-    --border-color: #3F4243;
+    --border-color: #3f42433a;
+
+    --google-auth-background-color: #3f42430c;
     
     --primary-header-fontfamily: "Roboto";
     --text-fontfamily: "Roboto Slab";

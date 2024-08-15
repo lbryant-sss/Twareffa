@@ -24,4 +24,20 @@
     h2:hover{
         color: white;
     }
+    .auth-menu{
+        display: flex;
+        flex-direction: column;
+        padding: 0%;
+        margin: 1vh;
+    }
+    .auth-menu li{
+        background-color: var(--dark-button-background);
+        width: 100%;
+        padding: 0.4%;
+        margin: 0.2%;
+    }
+    .auth-menu li a{
+        font-family: var(--text-font);
+        color: var(--white-font-color);
+    }
 }

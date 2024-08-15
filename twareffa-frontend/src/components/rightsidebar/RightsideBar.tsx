@@ -1,11 +1,21 @@
+import { Link } from "react-router-dom";
 import "./RightsideBar.css";
 
 function RightSideBar(){
+
     return (
         <>
             <div className="sidebar">
-                <h1>Nothing</h1>
-                <h2>Yet...</h2>
+                <div className="auth-links">
+                    <ul className="auth-menu">
+                        <li>
+                            <Link to="/Twareffa/login">Login</Link>
+                        </li>
+                        <li>
+                            <Link to="/Twareffa/signup">Create account</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </>
     )

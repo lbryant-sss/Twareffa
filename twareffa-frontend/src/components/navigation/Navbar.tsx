@@ -96,16 +96,6 @@ function Navbar(){
                                         </li>
                                     </ul>
                                 </div>
-                                <div className={`auth-links-div ${showNav ? "show" : "hide"} `}>
-                                    <ul className="menu-items">
-                                        <li>
-                                            <Link to="/Twareffa/login">Login</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/Twareffa/signup">Create account</Link>
-                                        </li>
-                                    </ul>
-                            </div>
                         </div>
                     </nav>
                 </header>

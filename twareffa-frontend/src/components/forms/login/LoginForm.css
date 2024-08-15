@@ -1,0 +1,87 @@
+@import url("../../../assets/styles/variables.css");
+
+
+@media screen and (max-width: 899px) {
+    
+}
+
+
+@media screen and (min-width: 900px) {
+    .login-form-container{
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid var(--border-color);
+        font-family: var(--text-font);
+    }
+    .native-login-box{
+        display: flex;
+        flex-direction: column;
+    }
+    .input, .submit-button, .account-recovery, .google-login-box{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    .input input{
+        padding: 10px;
+        font-family: var(--text-font);
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
+        outline: none;
+    }
+    .submit-button{
+        margin-bottom: 10px;
+    }
+    .submit-button input{
+        padding: 10px;
+        margin-top: 10px;
+        width: 50%;
+        font-family: var(--text-font);
+        background-color: var(--secondary-background-color);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .google-login-box a{
+        display: flex;
+        align-items: center;
+        color: var(--black-font-color);
+        margin: 8px 0 0 0;
+        width: 40%;
+        padding: 3px;
+        background-color: var(--google-auth-background-color);
+        border-radius: 4px;
+        border: 1px solid var(--border-color);
+        transition: background-color 0.4s ease-in-out;
+    }
+    .google-login-box a:hover{
+        background-color: var(--button-hover-background-color);
+    }
+    .account-recovery{
+        display: flex;
+        flex-direction: column;
+    }
+    .account-recovery a{
+        color: var(--black-font-color);
+        margin: 8px 0 0 0;
+        background-color: none;
+        width: 40%;
+        padding: 2px;
+        border-radius: 4px;
+        transition: background-color 0.4s ease-in-out;
+    }
+    .account-recovery a:hover{
+        background-color: var(--button-hover-background-color);
+    }
+    .google-login-box a img{
+        max-width: 30px;
+        max-height: 30px;
+    }
+}

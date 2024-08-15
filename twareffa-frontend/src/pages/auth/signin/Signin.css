@@ -1,9 +1,14 @@
-
+@import url("../../../assets/styles/variables.css");
 
 @media screen and (min-width: 900px) {
     .auth-wrapper{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .auth-box{
+        width: 90%;
+        border-radius: 10px;
+        box-shadow: 8px 16px 25px 0px rgba(0,0,0,0.1);
     }
 }
