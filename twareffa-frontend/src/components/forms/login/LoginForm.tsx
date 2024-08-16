@@ -5,7 +5,7 @@ import "./LoginForm.css";
 
 function LoginForm(){
     return(
-        <>
+        <> 
             <div className="login-form-container">
                 <div className="native-login-box">
                     <form action="POST">
@@ -29,10 +29,10 @@ function LoginForm(){
                     </Link>
                 </div>
                 <div className="account-recovery">
-                    <Link to='/forgot-password'>
+                    <Link to='/Twareffa/forgot-password'>
                         <span>Forgot password</span>
                     </Link>
-                    <Link to='/create-account'>
+                    <Link to='/Twareffa/signup'>
                         <span>Create a new account</span>
                     </Link>
                 </div>
