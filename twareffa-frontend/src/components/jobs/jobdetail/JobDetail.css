@@ -1,0 +1,17 @@
+@import url("../../../assets/styles/variables.css");
+
+
+@media screen and (max-width: 899px) {
+    
+}
+
+@media screen and (min-width: 900px) {
+    .job-detail-container{
+        align-items: flex-start;
+    }
+    .job-detail-box{
+        background-color: red;
+        min-width: 100%;
+        padding: 1%;
+    }
+}

@@ -7,7 +7,7 @@ function Joblist(){
         <>
             <section className="joblist-section">
                 <div className="joblist-wrapper">
-                    <Link to='/username'>
+                    <Link to='/Twareffa/username'>
                         <div className="joblist-card">
                             <div className="job-metadata">
                                 <span className="user-dp">
