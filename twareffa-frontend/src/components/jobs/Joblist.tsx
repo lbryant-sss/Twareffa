@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import JobSamples, {Job} from "./samples/JobSamples";
 
 //User data samples
-import publicUserData from "../userData/publicUserData";
 
 function Joblist(){
     return(
