@@ -2,7 +2,7 @@
 
 @media screen and (max-width: 899px) {
     .joblist-section{
-        min-height: 100vh;
+        min-height: fit-content;
         margin-top: 0vh;
         padding: 5vh 1vw 0 1vw;
     }

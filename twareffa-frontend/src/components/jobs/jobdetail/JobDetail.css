@@ -2,16 +2,178 @@
 
 
 @media screen and (max-width: 899px) {
-    
+    .job-detail-box{
+    }
+    .metadata{
+        display: flex;
+        background-color:  var(--primary-background-color);
+        width: 100%;
+    }
+    .user-data{
+        flex: 0.4;
+        display: flex;
+        margin-left: 10px;
+
+    }
+    .user-data img{
+        flex: 1;
+        width: 50px;
+        height: 100%;
+        border-radius: 50%;
+    }
+    .post-data{
+        margin-left: 1%;
+    }
+    .job-detail-card{
+        padding: 1%;
+        max-width: 98%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .job-content{
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .job-content p{
+        max-width: 600px;
+    }
+    .job-content img{
+        max-width: 100%;
+    }
+    .job-data{
+        display: flex;
+        background-color:  var(--primary-background-color);
+        width: 100%;
+    }
+    .job-data *{
+        flex: 1;
+    }
+    .user-verification-data{
+        width: 100%;
+    }
+    .verification{
+        display: flex;
+    }
+    .verification *{
+        flex: 1;
+    }
+    .ver-svg svg{
+        max-width: 30px;
+        margin-left: 1%;
+        fill: green;
+    }
+    .ver-svg{
+        display: flex;
+        align-items: center;
+    }
+    .verification p{
+        flex: 0.4;
+    }
+    .apply{
+        position: absolute;
+        right: 3%;
+        bottom: 3.5%;
+        height: 5vh;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        z-index: -1;
+    }
+    .apply span{
+        background-color: var(--secondary-background-color);
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5em;
+        letter-spacing: 2px;
+        font-weight: 600;
+        border-radius: 4px;
+    }
 }
 
 @media screen and (min-width: 900px) {
-    .job-detail-container{
-        align-items: flex-start;
-    }
     .job-detail-box{
-        background-color: red;
-        min-width: 100%;
-        padding: 1%;
+        width: 100%;
     }
-}
+    .job-detail-card{
+        width: 100%;
+    }
+    .metadata{
+        display: flex;
+        max-width: 100%;
+        background-color: var(--primary-background-color);
+        max-height: 10vh;
+    }
+    .user-data{
+        flex: 0.4;
+        display: flex;
+    }
+    .user-data img{
+        flex: 0.2;
+        max-width: 100%;
+        height: auto;
+    }
+    .job-content{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        width: 100%;
+    }
+    .job-content img{
+        max-width: 600px;
+        border-radius: 4px;
+        height: auto;
+        max-height: 100%;
+    }
+    .job-data{
+        display: flex;
+        padding: 0 1% 0 1%;
+        background-color: var(--primary-background-color);
+        width: 100%;
+    }
+    .job-data *{
+        flex: 1;
+    }
+    .verification{
+        display: flex;
+        width: 30%;
+    }
+    .verification p{
+        flex: 1;
+    }
+    .ver-svg{
+        display: flex;
+        align-items: center;
+    }
+    .ver-svg{
+        fill: green;
+    }
+    .apply{
+        width: 20%;
+        background-color: var(--secondary-background-color);
+        position: absolute;
+        right: 21%;
+        height: 5%;
+        bottom: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        transition: color 500ms ease-in-out;
+        cursor: pointer;
+    }
+    .apply:hover{
+        background-color: var(--button-hover-background-color);
+        color: var(--white-font-color);
+    }
+    .apply span{
+        font-size: 1.7em;
+        line-height: 5.5%;
+    }
+} 

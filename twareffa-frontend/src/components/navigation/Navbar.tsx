@@ -1,6 +1,5 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import Menubar from "../../assets/icons/menubar.svg";
 import HomeIcon from "../../assets/icons/nav-icons/home.svg";
 import MessagesIcon from "../../assets/icons/nav-icons/messages.svg";
 import NotificationsIcon from "../../assets/icons/nav-icons/notifications.svg";
@@ -8,6 +7,7 @@ import ProfileIcon from "../../assets/icons/nav-icons/profile.svg";
 import SearchIcon from "../../assets/icons/nav-icons/search.svg";
 import WalletIcon from "../../assets/icons/nav-icons/wallet.svg";
 import WorkIcon from "../../assets/icons/nav-icons/work.svg";
+import BackPageIcon from "../../assets/icons/arrow_back.svg";
 
 
 import { useState } from "react";
@@ -22,7 +22,7 @@ function Navbar(){
 
     return(
         <>
-            <div className="navbar-wrapper">
+            <div className="navbar-wrapper navbar-wrapper-fixed">
                 <header>
                     <div className="logo">
                         <Link to="/Twareffa">
@@ -30,7 +30,7 @@ function Navbar(){
                         </Link>
                     </div>
                     <div className="menu-icon">
-                        <img src={showNav ? Menubar : Menubar} alt="Menubar" onClick={toggleNav} />
+                        <img src={showNav ?BackPageIcon :BackPageIcon} alt="Menubar" onClick={toggleNav} />
                     </div>
                     <nav className={`slider ${showNav ? "show" : "hide"} `}>
                         <div className="menu">
@@ -61,8 +61,8 @@ function Navbar(){
                                                 </div>
                                             </Link>
                                         </li>
-                                        <li>
-                                            <Link to="/Twareffa">
+                                        <li className="accounts-nav-button">
+                                            <Link to="/Twareffa/login">
                                                 <span>My Profile</span>
                                                 <div className="icon">
                                                     <img src={ProfileIcon} />
@@ -70,7 +70,7 @@ function Navbar(){
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/Twareffa">
+                                            <Link to="/Twareffa/wallet">
                                             <span>Wallet</span>
                                             <div className="icon">
                                                 <img src={WalletIcon} />

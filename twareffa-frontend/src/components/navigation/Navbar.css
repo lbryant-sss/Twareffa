@@ -76,7 +76,7 @@
       max-width: 10vw;
       height: 5vh;
       max-height: 5vh;
-      z-index: 10;
+      z-index: 1000;
     }
     .note-counter, .message-couter{
       color: red;
@@ -90,7 +90,6 @@
     .messages{
       position: relative;
     }
-
 }
 
 
@@ -109,7 +108,10 @@
   .navbar-wrapper{
     background-color: var(--secondary-background-color);
     height: 100vh;
-    
+  }
+  .navbar-wrapper-fixed{
+    position: sticky;
+    top: 0%;
   }
   .menu-icon{
     display: none;

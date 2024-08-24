@@ -7,6 +7,10 @@ import ForgotPassword from './pages/auth/forgotpass/ForgotPassword';
 import ResetPassword from './pages/auth/resetpass/ResetPassword';
 import JobDetail from './components/jobs/jobdetail/JobDetail';
 
+
+//Wallet Links
+import WalletHome from './pages/wallet/wallet-home/WalletHome';
+
 function App() {
   return (
     <>
@@ -17,7 +21,9 @@ function App() {
         <Route path='/Twareffa/signup' element={<Register />} />
         <Route path='/Twareffa/forgot-password' element={<ForgotPassword />} />
         <Route path='/Twareffa/reset-password' element={<ResetPassword />} />
-        <Route path='/Twareffa/username' element={<JobDetail />} />
+        <Route path='/Twareffa/:jid' element={<JobDetail />} />
+      
+        <Route path='/Twareffa/wallet' element={<WalletHome />} />
       </Routes>
     </BrowserRouter>
     </>
