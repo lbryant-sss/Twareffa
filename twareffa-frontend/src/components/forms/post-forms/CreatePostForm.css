@@ -1,0 +1,91 @@
+@import url("../../../assets/styles/variables.css");
+
+/*Mobile UI*/
+@media screen and (max-width: 899px) {
+
+}
+
+@media screen and (min-width: 900px){
+   .post-text {
+    width: 100%;
+    position: relative;
+   }
+   .post-text input, textarea{
+    margin-bottom: 1%;
+   }
+   .image-preview{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow-y: auto;
+   }
+   .image-preview img{
+    min-width: 98%;
+    max-height: 70%;
+   }
+   .image-upload-button{
+    width: 4.2%;
+    position: fixed;
+    bottom: 0.3%;
+    right: 26.3%;
+    display: flex;
+    justify-content: center;
+    background-color: #bec7ced7;
+    backdrop-filter: blur(5px);
+    padding: 1%;
+    cursor: pointer;
+   }
+   .image-upload-button svg{
+    max-width: 50px;
+    fill: var(--secondary-background-color);
+   }
+   .post-addons{
+    max-width: 50vw;
+    position: fixed;
+    bottom: 0.3%;
+    left: auto;
+    background-color: #bec7ce9a;
+    backdrop-filter: blur(5px);
+    padding: 0 1% 1% 1%;
+   }
+   .extra-post-information{
+    display: flex;
+   }
+   .post-foot-additions{
+    display: flex;
+    flex-direction: column;
+   }
+   .extra-post-information *{
+    flex: 1;
+   }
+   .submit-button{
+    position: fixed;
+    top: 0;
+    width: 10vw;
+   }
+}
+
+.post-text textarea{
+    outline: none;
+    font-family: var(--text-font);
+    padding: 1%;
+    font-size: 1em;
+    border: none;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    transition: border-bottom 400ms ease-in-out;
+   }
+   .post-text textarea:focus{
+        border-bottom: 1px solid var(--secondary-background-color);
+   }
+
+   .submit-button button{
+    background-color: var(--secondary-background-color);
+    border: none;
+    font-family: var(--text-font);
+    font-size: 1.2em;
+    letter-spacing: 2px;
+    color: var(--white-font-color);
+    border-radius: 4px;
+    cursor: pointer;
+}

@@ -6,8 +6,8 @@ import "./LoginForm.css";
 function LoginForm(){
     return(
         <> 
-            <div className="login-form-container">
-                <div className="native-login-box">
+            <div className="all-form-container">
+                <div className="form-box">
                     <form action="POST">
                         <div className="input">
                             <label htmlFor="">Login</label>

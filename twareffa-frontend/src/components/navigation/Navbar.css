@@ -159,3 +159,10 @@
   }
 
 }
+
+.nav-list-item{
+  cursor: pointer;
+}
+.nav-list-item.active{
+  background-color: #222;
+}

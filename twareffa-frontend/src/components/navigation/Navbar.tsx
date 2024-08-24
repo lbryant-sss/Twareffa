@@ -8,9 +8,10 @@ import SearchIcon from "../../assets/icons/nav-icons/search.svg";
 import WalletIcon from "../../assets/icons/nav-icons/wallet.svg";
 import WorkIcon from "../../assets/icons/nav-icons/work.svg";
 import BackPageIcon from "../../assets/icons/arrow_back.svg";
+import PenIcon from "../../assets/icons/nav-icons/stylus_note.svg";
 
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 
 function Navbar(){
 
@@ -19,6 +20,12 @@ function Navbar(){
     const toggleNav = () =>{
         setShowNav(prevState => !prevState);
     }
+
+    const [activeButton, setActiveButton] = useState('Home');
+
+    const handleClick = (buttonName: SetStateAction<string>) => {
+        setActiveButton(buttonName);
+    };
 
     return(
         <>
@@ -36,52 +43,12 @@ function Navbar(){
                         <div className="menu">
                                 <div className="menu-list">
                                     <ul className={`menu-items ${showNav ? "show" :"hide"}`}>
-                                        <li>
+                                        <li className={`nav-list-item ${activeButton === 'Home' ? 'active' : ''}`}
+                                            onClick={() => handleClick('Home')}>
                                             <Link to="/Twareffa">
                                                 <span>Home</span>
                                                 <div className="icon">
                                                     <img src={HomeIcon} />
-                                                </div>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/Twareffa">
-                                                <span>Jobs</span>
-                                                <div className="icon">
-                                                    <img src={WorkIcon} />
-                                                </div>
-                                            </Link>
-                                        </li>
-                                        <li className="messages">
-                                            <Link to="/Twareffa">
-                                                <span>Messages</span>
-                                                <div className="icon">
-                                                    <p className="message-couter">0</p>
-                                                    <img src={MessagesIcon} />
-                                                </div>
-                                            </Link>
-                                        </li>
-                                        <li className="accounts-nav-button">
-                                            <Link to="/Twareffa/login">
-                                                <span>My Profile</span>
-                                                <div className="icon">
-                                                    <img src={ProfileIcon} />
-                                                </div>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/Twareffa/wallet">
-                                            <span>Wallet</span>
-                                            <div className="icon">
-                                                <img src={WalletIcon} />
-                                            </div>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/Twareffa">
-                                            <span>Search</span>
-                                                <div className="icon">
-                                                    <img src={SearchIcon} />
                                                 </div>
                                             </Link>
                                         </li>
@@ -91,6 +58,61 @@ function Navbar(){
                                                 <div className="icon">
                                                     <p className="note-counter">0</p>
                                                     <img src={NotificationsIcon} />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                        <li className={`nav-list-item ${activeButton === 'Jobs' ? 'active' : ''}`}
+                                            onClick={() => handleClick('Jobs')}>
+                                            <Link to="/Twareffa" className="link">
+                                                <span>Active Jobs</span>
+                                                <div className="icon">
+                                                    <img src={WorkIcon} />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                        <li className={`nav-list-item messages ${activeButton === 'Messages' ? 'active' : ''}`}
+                                            onClick={() => handleClick('Messages')}>
+                                            <Link to="/Twareffa">
+                                                <span>Messages</span>
+                                                <div className="icon">
+                                                    <p className="message-couter">0</p>
+                                                    <img src={MessagesIcon} />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                        <li className={`nav-list-item ${activeButton === 'Accounts' ? 'active' : ''}`}
+                                            onClick={() => handleClick('Accounts')} >
+                                            <Link to="/Twareffa/login">
+                                                <span>My Profile</span>
+                                                <div className="icon">
+                                                    <img src={ProfileIcon} />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                        <li className={`nav-list-item ${activeButton === 'Wallet' ? 'active' : ''}`}
+                                            onClick={() => handleClick('Wallet')}>
+                                            <Link to="/Twareffa/wallet">
+                                            <span>Wallet</span>
+                                            <div className="icon">
+                                                <img src={WalletIcon} />
+                                            </div>
+                                            </Link>
+                                        </li>
+                                        <li className={`nav-list-item ${activeButton === 'Search' ? 'active' : ''}`}
+                                            onClick={() => handleClick('Search')}>
+                                            <Link to="/Twareffa">
+                                            <span>Search</span>
+                                                <div className="icon">
+                                                    <img src={SearchIcon} />
+                                                </div>
+                                            </Link>
+                                        </li>
+                                        <li className={`nav-list-item ${activeButton === 'Post' ? 'active' : ''}`}
+                                            onClick={() => handleClick('Post')}>
+                                            <Link to="/Twareffa/create-post">
+                                            <span>Post Job</span>
+                                                <div className="icon">
+                                                    <img src={PenIcon} />
                                                 </div>
                                             </Link>
                                         </li>
