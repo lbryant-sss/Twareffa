@@ -63,15 +63,15 @@ function PostForm() {
                                 <div className="extra-post-information">
                                     <div className="amount post-foot-additions">
                                         <label htmlFor="">Amount</label>
-                                        <input type="number" name="" id="" required/>
+                                        <input type="number" placeholder="300" name="" id="" required/>
                                     </div>
                                     <div className="location post-foot-additions">
                                         <label htmlFor="">Location</label>
-                                        <input type="text"required />
+                                        <input type="text" placeholder="job location" required />
                                     </div>
                                     <div className="skill post-foot-additions">
                                         <label htmlFor="">Skill</label>
-                                        <input type="text" required/>
+                                        <input type="text" defaultValue="General" required/>
                                     </div>
                                 </div>
                             </div>

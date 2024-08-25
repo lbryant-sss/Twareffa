@@ -2,7 +2,76 @@
 
 /*Mobile UI*/
 @media screen and (max-width: 899px) {
-
+    .form-box{
+        padding: 0%;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+    .post-content-box{
+        width: 100%;
+    }
+    .post-text textarea{
+        min-height: 20vh;
+        max-height: fit-content;
+        max-width: 100%;
+        overflow: hidden;
+        resize: vertical;
+    }
+    .image-preview{
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 6px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .image-preview img{
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .post-text span{
+        width: 30px;
+    }
+    .post-text svg{
+        max-width: 30px;
+        fill: var(--secondary-background-color);
+    }
+    .submit-button{
+        position: fixed;
+        bottom: 10%;
+    }
+    .submit-button button{
+        border-radius: 20px !important;
+        padding: 10px;
+    }
+    .extra-post-information{
+        margin-top: 2%;
+    }
+    .post-foot-additions{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1.5% 0 0 0;
+    }
+    .post-foot-additions input{
+        height: 5vh;
+        flex: 1;
+        outline: none;
+        border: 1px solid var(--border-color);
+        transition: border 400ms ease-in-out;
+        font-size: 1rem;
+        padding: 0%;
+    }
+    .post-foot-additions:focus{
+        border-color: 1px solid var(--secondary-background-color);
+    }
+    .post-foot-additions label{
+        flex: 0.5;
+        font-size: 1rem;
+    }
 }
 
 @media screen and (min-width: 900px){
