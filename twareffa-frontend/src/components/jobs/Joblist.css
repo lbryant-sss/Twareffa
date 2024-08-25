@@ -21,17 +21,45 @@
         align-items: center;
     }
     .job-pay{
-        background-color: transparent;
+        background-color: var(--heading-background-color);
+        margin-top: 1%;
+        font-size: 1rem;
+    }
+    .job-pay span{
+        width: fit-content;
+    }
+    .job-location{
+        flex: 0.9;
+    }
+    .bid-amount{
+        flex: 0.9;
+        font-weight: 500;
+    }
+    .share-icon{
+        flex: 0.2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
+        height: 100%;
+    }
+    .share-icon:hover{
+        background-color: green;
     }
     .job-metadata span{
         margin: 0.3vw;
     }
     .user-dp{
         flex: 0.2;
-        background-color: red;
         border-radius: 50%;
         max-height: 50px;
         max-width: 50px;
+        padding: 0%;
+        margin: 0%;
+    }
+    .user-dp img{
+        max-width: 50px;
+        border-radius: 50%;
     }
     .user-name, .created_at{
         flex: 0.9;
@@ -45,14 +73,49 @@
         font-size: 1em;
         color: var(--black-font-color);
     }
-    .job-pay span{
-        flex: 1;
-        font-size: 1em;
-    }
-    .share-icon{
+    .job-media{
         display: flex;
-        justify-content: flex-end;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        height: auto;
     }
+    .job-media img{
+        border-radius: 10px;
+        width: 98%;
+        max-width: 98%;
+        height: auto;
+    }
+
+    /*SHARE JOB LINK POPUP STYLES*/
+    .share-popup-link-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+    .share-link-popup{
+        border: 5px solid var(--secondary-background-color);
+        position: fixed; /* Stays fixed relative to the viewport */
+        top: 50%;        /* Center vertically */
+        left: 50%;       /* Center horizontally */
+        transform: translate(-50%, -50%); /* Adjust for exact centering */
+        width: 80vw;
+        height: 25vh;
+        background-color: white;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 1);
+        z-index: 1000;   
+        border-radius: 5px;
+        font-size: 1rem;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
 }
 
 
@@ -97,6 +160,7 @@
     .user-dp{
         flex: 0.2;
     }
+
     .created-at{
         flex: 1.2;
         
