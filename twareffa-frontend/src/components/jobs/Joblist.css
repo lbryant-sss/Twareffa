@@ -40,11 +40,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: red;
         height: 100%;
-    }
-    .share-icon:hover{
-        background-color: green;
     }
     .job-metadata span{
         margin: 0.3vw;
@@ -86,36 +82,38 @@
         max-width: 98%;
         height: auto;
     }
-
-    /*SHARE JOB LINK POPUP STYLES*/
-    .share-popup-link-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
+    /*Share link popup*/
+    .job-share-link{
+        display: block;
+        white-space: nowrap;
         width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 999;
-      }
-    .share-link-popup{
-        border: 5px solid var(--secondary-background-color);
-        position: fixed; /* Stays fixed relative to the viewport */
-        top: 50%;        /* Center vertically */
-        left: 50%;       /* Center horizontally */
-        transform: translate(-50%, -50%); /* Adjust for exact centering */
-        width: 80vw;
-        height: 25vh;
-        background-color: white;
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 1);
-        z-index: 1000;   
-        border-radius: 5px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-family: var(--text-font);
         font-size: 1rem;
-        padding: 1%;
+      }
+      .link-content{
         display: flex;
+        margin-top: 10%;
+        justify-content: center;
         flex-direction: column;
-    }
-
-
+        white-space: nowrap;
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .copy-icon svg{
+        width: 15%;
+      }
+      .copy-icon{
+        background-color: red;
+        display: flex;
+        align-items: center;
+        padding: 0%;
+      }
+      .copy-success-message{
+        color: green;
+      }
 }
 
 
@@ -127,6 +125,7 @@
     .joblist-wrapper{
         padding: 1% 1%;
         margin: 0.7%;
+        border-bottom: 2px solid var(--border-color);
     }
     .joblist-card{
         min-height: fit-content;
@@ -145,6 +144,14 @@
         align-items: center;
         padding: 0.2em;
     }
+    .job-metadata span img{
+        max-width: 50px;
+    }
+    .job-media img{
+        width: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+    }
     .job-content{
         display: flex;
         align-items: center;
@@ -156,9 +163,6 @@
         font-family: var(--text-font);
         font-size: 1em;
         color: var(--black-font-color);
-    }
-    .user-dp{
-        flex: 0.2;
     }
 
     .created-at{
@@ -183,5 +187,56 @@
         display: flex;
         justify-content: flex-end;
     }
-    
+    /*Link share popup*/
+    .link-content{
+        padding: 1%;
+    }
+    .link-content span{
+        padding: 1%;
+    }
+    .copy-success-message{
+        display: none;
+    }
+    .share-link-popup{
+        max-width: 50%;
+    }
 }
+
+
+/*UNIVERSAL POPUP STYLES*/
+    /*SHARE JOB LINK POPUP STYLES*/
+    /* Overlay container that holds the popup, hidden by default */
+    .share-popup-link-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none; /* Initially hidden */
+        align-items: center; /* Center the popup vertically */
+        justify-content: center; /* Center the popup horizontally */
+      }
+      
+      /* Show the overlay and center the popup when .show class is added */
+      .share-popup-link-overlay.show {
+        display: flex; /* Flex makes the overlay visible */
+      }
+      
+      /* Style the actual popup */
+      .share-link-popup {
+        border: 5px solid var(--secondary-background-color);
+        position: relative; /* Relative to the flex center of the parent */
+        width: 80vw;
+        height: 25vh;
+        background-color: white;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 1);
+        z-index: 1000;
+        border-radius: 5px;
+        font-size: 1rem;
+        padding: 1%;
+        display: flex;
+        flex-direction: column;
+      }
+    

@@ -23,6 +23,18 @@ const JobSamples: Job[] = [
         town: "Kiserian",
         location: "Triangle",
         skills: "None",
+    },
+    {
+        user_id: 2,
+        jid: 2,
+        created_at: "1 min ago",
+        job_description: "I need a chef for my granny's birthday.",
+        job_media_link: "https://img.freepik.com/free-vector/sticker-design-with-chef-girl-cooking-food-cartoon-character_1308-64629.jpg",
+        bid_amount: "300",
+        town: "Westlands Square",
+        location: "Westlands",
+        skills: "None",
     }
+
 ]
 export default JobSamples;

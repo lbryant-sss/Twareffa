@@ -4,26 +4,53 @@ import { Link } from "react-router-dom";
 
 //Job Samples API
 import JobSamples, {Job} from "./samples/JobSamples";
+import { useRef, useState } from "react";
 
 //User data samples
  
 
-function ShareJobLinkPopup(){
+
+//popup stuff
+type ShareJobLinkPopupProps = {
+    showPopup: boolean;
+    handleClose: () => void;
+}
+function ShareJobLinkPopup({ showPopup, handleClose }: ShareJobLinkPopupProps){
+    //Copy text to clipboard
+    const linkRef = useRef<HTMLSpanElement | null>(null);
+
+    const handleCopyLink = () => {
+        if (linkRef.current) {
+            navigator.clipboard
+                .writeText(linkRef.current.textContent || "")
+                .then(() => {
+                    console.log("Text copied to clipboard");
+                    alert("Link copied to clipboard");
+                })
+                .catch((err) => {
+                    console.error("Failed to copy text: ", err);
+                })
+        }
+    };
+
     return(
         <>
-        <div className="share-popup-link-overlay">
+        <div className={`share-popup-link-overlay ${showPopup ? "show": ""}`}>
             <div className="share-link-popup">
-                <div className="close-button">
+                <div className="close-button" onClick={handleClose}>
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#222"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
                 </div>
                 <div className="share-job-link-text">
                     <span>Share this job</span>
                 </div>
                 <div className="link-content">
-                    <span className="job-share-link">
+                    <span className="job-share-link" ref={linkRef}>
                         https://www.twareffa.com/jobid122413452345
                     </span>
-                    <span className="share-link-icon">copy</span>
+                    <span className="share-link-icon copy-icon" onClick={handleCopyLink}>
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 -960 960 960" width="24px" fill="#2593D5"><path d="M360-240q-33 0-56.5-23.5T280-320v-480q0-33 23.5-56.5T360-880h360q33 0 56.5 23.5T800-800v480q0 33-23.5 56.5T720-240H360Zm0-80h360v-480H360v480ZM200-80q-33 0-56.5-23.5T120-160v-560h80v560h440v80H200Zm160-240v-480 480Z"/></svg>
+                    </span>
+                    <span className="copy-success-message">Link copied</span>
                 </div>
             </div>
         </div>
@@ -33,12 +60,18 @@ function ShareJobLinkPopup(){
 
 
 function Joblist(){
+    //Popup toggle
+    const [showPopup, setShowPopup] = useState(false);
+    const handlePopupClick = () => {
+        setShowPopup(!showPopup);
+    }
     return(
         <>
-        {JobSamples.map((job: Job) => (
+        
         //Associated Post User Public Data
             //return (
                 <section className="joblist-section">
+                {JobSamples.map((job: Job) => (
                     <div className="joblist-wrapper">
                         <Link to={`/Twareffa/${job.jid}`} key={job.jid}>
                             <div className="joblist-card">
@@ -59,7 +92,7 @@ function Joblist(){
                                     </span>
                                 </div>
                                 <div className="job-media">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD6pwtlWDEpDx_FdwpVqaeL-WTjgEtmrkoaQ&s" alt="" />
+                                    <img src={job.job_media_link} alt="" />
                                 </div>
                                 
                             </div>
@@ -71,16 +104,17 @@ function Joblist(){
                             <span className="bid-amount">
                                   Pay: Ksh. {job.bid_amount}
                             </span> 
-                            <span className="share-icon">
+                            <span className="share-icon" onClick={handlePopupClick}>
                                 <img src={ShareIcon} alt="" />
                             </span>
                         </div>
                     </div>
+                    ))}
             </section>
-            //);
-        ))};
+            
+        
           {/* Show popup when share button is clicked */}
-          <ShareJobLinkPopup />
+          <ShareJobLinkPopup showPopup={showPopup} handleClose={handlePopupClick} />
         </>
     )
 }
