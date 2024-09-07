@@ -172,6 +172,12 @@
     .user-name{
         flex: 0.6;
     }
+    .job-pay{
+        background-color: var(--heading-background-color);
+        margin-top: 1%;
+        font-size: 1rem;
+        padding: 1%;
+    }
 
     .job-pay{
         display: flex;

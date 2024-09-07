@@ -1,7 +1,7 @@
 from pathlib import Path
 from datetime import timedelta
 from dotenv import load_dotenv
-
+import os
 load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     "corsheaders",
     #Auth app
     "accounts",
+
+    #Content app
+    'content',
 ]
 
 
@@ -129,6 +132,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

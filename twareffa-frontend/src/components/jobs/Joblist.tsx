@@ -67,10 +67,7 @@ function Joblist(){
     }
     return(
         <>
-        
-        //Associated Post User Public Data
-            //return (
-                <section className="joblist-section">
+            <section className="joblist-section">
                 {JobSamples.map((job: Job) => (
                     <div className="joblist-wrapper">
                         <Link to={`/Twareffa/${job.jid}`} key={job.jid}>

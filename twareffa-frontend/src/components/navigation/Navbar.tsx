@@ -9,13 +9,17 @@ import WalletIcon from "../../assets/icons/nav-icons/wallet.svg";
 import WorkIcon from "../../assets/icons/nav-icons/work.svg";
 import BackPageIcon from "../../assets/icons/arrow_back.svg";
 import PenIcon from "../../assets/icons/nav-icons/stylus_note.svg";
-
+import SearchBar from "../searchbar/SearchBar";
 
 import { SetStateAction, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar(){
 
     const [showNav, setShowNav] = useState(false);
+
+    //Initializing the navigation
+    const navigate = useNavigate();
 
     const toggleNav = () =>{
         setShowNav(prevState => !prevState);
@@ -26,17 +30,24 @@ function Navbar(){
     const handleClick = (buttonName: SetStateAction<string>) => {
         setActiveButton(buttonName);
     };
+    //Previous page button
+    const handleBack = () => {
+        navigate(-1);
+    }
 
     return(
         <>
             <div className="navbar-wrapper navbar-wrapper-fixed">
                 <header>
+                    <div className="search-prop">
+                        <SearchBar />
+                    </div>
                     <div className="logo">
                         <Link to="/Twareffa">
                             <span >twareffa</span>
                         </Link>
                     </div>
-                    <div className="menu-icon">
+                    <div className="menu-icon" onClick={handleBack}>
                         <img src={showNav ?BackPageIcon :BackPageIcon} alt="Menubar" onClick={toggleNav} />
                     </div>
                     <nav className={`slider ${showNav ? "show" : "hide"} `}>
