@@ -13,7 +13,7 @@ const Signin: React.FC = () => {
                 </div>
                 <div className="auth-wrapper middle-wrapper">
                     <div className="auth-box">
-                        <LoginForm />
+                        <LoginForm route="auth/api/token/" method='login' />
                     </div>
                 </div>
                 <div className="rightsidebar other-content-right">

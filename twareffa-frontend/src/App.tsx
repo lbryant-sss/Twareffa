@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './App.css'
 import Homepage from './pages/homepage/Homepage'
 import Signin from './pages/auth/signin/Signin'
@@ -6,20 +6,38 @@ import Register from './pages/auth/signup/Register';
 import ForgotPassword from './pages/auth/forgotpass/ForgotPassword';
 import ResetPassword from './pages/auth/resetpass/ResetPassword';
 import JobDetail from './components/jobs/jobdetail/JobDetail';
-
+import ProtectedRoute from './components/protectedroutes/ProtectedRoute'
 //Create, Update, Delete Posts
 import CreatePost from './pages/posts/create-post/CreatePost';
 
 //Wallet Links
 import WalletHome from './pages/wallet/wallet-home/WalletHome';
 
+
+function Logout() {
+  localStorage.clear();
+  return <Navigate to="/Twareffa/logout" />
+}
+
+function RegisterAndLogout() {
+  localStorage.clear();
+  return <Register />
+}
+
 function App() {
   return (
     <>
     <BrowserRouter>
       <Routes>
-        <Route path='/Twareffa' element={<Homepage />} />
+        <Route 
+          path='/Twareffa' 
+          element={
+            <ProtectedRoute>
+              <Homepage />
+            </ProtectedRoute>
+            } />
         <Route path='/Twareffa/login' element={<Signin />} />
+        <Route path='/Twareffa/logout' element={<Logout />} />
         <Route path='/Twareffa/signup' element={<Register />} />
         <Route path='/Twareffa/forgot-password' element={<ForgotPassword />} />
         <Route path='/Twareffa/reset-password' element={<ResetPassword />} />
@@ -35,4 +53,4 @@ function App() {
   )
 }
 
-export default App
+export default App;

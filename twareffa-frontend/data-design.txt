@@ -1,0 +1,9 @@
+POST DATA
+
+`Text content
+`Image/ media content
+`Time created - dehumanized
+`Time created - humanized
+`Author
+`Location
+`Price

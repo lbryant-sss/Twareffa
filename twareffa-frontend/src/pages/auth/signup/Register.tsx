@@ -3,6 +3,7 @@ import RegisterForm from "../../../components/forms/register/RegisterForm"
 import RightSideBar from "../../../components/rightsidebar/RightsideBar"
 
 function Register(){
+
     return(
         <>
             <section>
@@ -12,7 +13,7 @@ function Register(){
                 </div>
                 <div className="auth-wrapper middle-wrapper">
                     <div className="auth-box">
-                        <RegisterForm />
+                        <RegisterForm route="/auth/api/user/register" method="register"/>
                     </div>
                 </div>
                 <div className="rightsidebar other-content-right">
