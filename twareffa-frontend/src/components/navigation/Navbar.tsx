@@ -93,7 +93,7 @@ function Navbar(){
                                         </li>
                                         <li className={`nav-list-item ${activeButton === 'Accounts' ? 'active' : ''}`}
                                             onClick={() => handleClick('Accounts')} >
-                                            <Link to="/Twareffa/login">
+                                            <Link to="/Twareffa/private-profile">
                                                 <span>My Profile</span>
                                                 <div className="icon">
                                                     <img src={ProfileIcon} />

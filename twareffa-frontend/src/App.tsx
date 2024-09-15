@@ -7,6 +7,8 @@ import ForgotPassword from './pages/auth/forgotpass/ForgotPassword';
 import ResetPassword from './pages/auth/resetpass/ResetPassword';
 import JobDetail from './components/jobs/jobdetail/JobDetail';
 import ProtectedRoute from './components/protectedroutes/ProtectedRoute'
+
+import PrivateUserprofile from './pages/userprofile/privateprofile/PrivateUserProfile';
 //Create, Update, Delete Posts
 import CreatePost from './pages/posts/create-post/CreatePost';
 
@@ -47,6 +49,8 @@ function App() {
         <Route path='/Twareffa/create-post' element={<CreatePost />}/>
 
         <Route path='/Twareffa/wallet' element={<WalletHome />} />
+
+        <Route path='/Twareffa/private-profile' element={<PrivateUserprofile />} />
       </Routes>
     </BrowserRouter>
     </>
