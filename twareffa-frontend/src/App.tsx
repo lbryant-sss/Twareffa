@@ -9,6 +9,7 @@ import JobDetail from './components/jobs/jobdetail/JobDetail';
 import ProtectedRoute from './components/protectedroutes/ProtectedRoute'
 
 import PrivateUserprofile from './pages/userprofile/privateprofile/PrivateUserProfile';
+import EditProfileForm from './pages/userprofile/profileEditor/editProfile';
 //Create, Update, Delete Posts
 import CreatePost from './pages/posts/create-post/CreatePost';
 
@@ -51,6 +52,8 @@ function App() {
         <Route path='/Twareffa/wallet' element={<WalletHome />} />
 
         <Route path='/Twareffa/private-profile' element={<PrivateUserprofile />} />
+
+        <Route path='/Twareffa/edit-profile' element={<EditProfileForm />} />
       </Routes>
     </BrowserRouter>
     </>
